@@ -1,9 +1,14 @@
 import { PropsWithChildren } from 'react';
 import useScreenSize from '../../hooks/useScreenSize';
-import { sectionCSS, titleContainerCSS, titleCSS, titleShadowCSS } from './style';
+import {
+  sectionCSS,
+  titleContainerCSS,
+  titleCSS,
+  titleShadowCSS,
+} from './style';
 
-const Section = ({title, children}: PropsWithChildren<any>) => {
-  const {screenL} = useScreenSize();
+const Section = ({ title, children }: PropsWithChildren<any>) => {
+  const { screenL } = useScreenSize();
 
   return (
     <div style={sectionCSS(screenL)}>
@@ -13,7 +18,7 @@ const Section = ({title, children}: PropsWithChildren<any>) => {
       </div>
       {children}
     </div>
-  )
-}
+  );
+};
 
 export default Section;

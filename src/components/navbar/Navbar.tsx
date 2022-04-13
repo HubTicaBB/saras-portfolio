@@ -10,7 +10,9 @@ import { scrollToTop } from '../../utils/scroll';
 
 const Navbar = () => {
   const [scrollY, setScrolledY] = useState(0);
-  const [focusId, setFocusId] = useState<string | null | undefined>(HOME_ELEMENT_ID);
+  const [focusId, setFocusId] = useState<string | null | undefined>(
+    HOME_ELEMENT_ID
+  );
   const [hoverId, setHoverId] = useState<string | null | undefined>();
 
   const { screenL, screenHeight } = useScreenSize();
@@ -19,32 +21,34 @@ const Navbar = () => {
     scrollToTop();
     setFocusId(HOME_ELEMENT_ID);
     setHoverId(null);
-  }
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolledY(window.pageYOffset);
     window.removeEventListener('scroll', onScroll);
     window.addEventListener('scroll', onScroll, { passive: true });
+
     return () => window.removeEventListener('scroll', onScroll);
-}, [scrollY]);
+  }, [scrollY]);
 
   return (
     <header style={headerCSS(scrollY > screenHeight - 160)}>
       <nav style={navbarCSS}>
-        {screenL
-          ? <Menu
-              focusId={focusId}
-              setFocusId={setFocusId}
-              hoverId={hoverId}
-              setHoverId={setHoverId}
-            />
-          : <MobileNavbar
-              focusId={focusId}
-              setFocusId={setFocusId}
-              hoverId={hoverId}
-              setHoverId={setHoverId}
-            />
-        }
+        {screenL ? (
+          <Menu
+            focusId={focusId}
+            setFocusId={setFocusId}
+            hoverId={hoverId}
+            setHoverId={setHoverId}
+          />
+        ) : (
+          <MobileNavbar
+            focusId={focusId}
+            setFocusId={setFocusId}
+            hoverId={hoverId}
+            setHoverId={setHoverId}
+          />
+        )}
       </nav>
       <div
         onClick={() => scrollToTopAndFocusHome()}
@@ -52,8 +56,8 @@ const Navbar = () => {
       >
         <ArrowUpIcon color={colorPalette.default.white} />
       </div>
-    </header> 
-  )
-}
+    </header>
+  );
+};
 
 export default Navbar;

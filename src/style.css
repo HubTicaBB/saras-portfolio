@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #444444;
 }
 
@@ -23,8 +23,13 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -93,7 +98,8 @@ h1, h2, h3, h4, h5, h6 {
 .navbar li {
   position: relative;
 }
-.navbar a, .navbar a:focus {
+.navbar a,
+.navbar a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -102,17 +108,21 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   transition: 0.3s;
   font-size: 12px;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
 }
-.navbar a i, .navbar a:focus i {
+.navbar a i,
+.navbar a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
 }
-.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
   color: #ffb727;
 }
 .navbar .dropdown ul {
@@ -144,7 +154,9 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .dropdown ul a i {
   font-size: 12px;
 }
-.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover > a {
   color: #ffb727;
 }
 .navbar .dropdown:hover > ul {
@@ -222,15 +234,19 @@ h1, h2, h3, h4, h5, h6 {
   overflow-y: auto;
   transition: 0.3s;
 }
-.navbar-mobile a, .navbar-mobile a:focus {
+.navbar-mobile a,
+.navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 14px;
   color: #3b434a;
 }
-.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover > a {
   color: #ffb727;
 }
-.navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
   margin: 15px;
 }
 .navbar-mobile .dropdown ul {
@@ -253,7 +269,9 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-mobile .dropdown ul a i {
   font-size: 12px;
 }
-.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover > a {
   color: #ffb727;
 }
 .navbar-mobile .dropdown > .dropdown-active {
@@ -266,12 +284,12 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top right;
+  background: url('../img/hero-bg.jpg') top right;
   background-size: cover;
   position: relative;
 }
 #hero:before {
-  content: "";
+  content: '';
   background: rgba(0, 0, 0, 0.65);
   position: absolute;
   bottom: 0;
@@ -294,7 +312,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
-  font-family: "Satisfy", serif;
+  font-family: 'Satisfy', serif;
   color: #fff;
 }
 #hero h2 {
@@ -440,7 +458,7 @@ section {
   display: inline-block;
   padding-right: 10px;
   color: #6c757d;
-  content: "/";
+  content: '/';
 }
 @media (max-width: 768px) {
   .breadcrumbs .d-flex {
@@ -505,7 +523,7 @@ section {
 .about .content .count-box p {
   padding: 15px 0 0 0;
   margin: 0 0 0 50px;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 14px;
   color: #5d6a75;
 }
@@ -515,14 +533,14 @@ section {
   margin-top: 20px;
   color: #5d6a75;
   font-size: 15px;
-  font-family: "Satisfy", serif;
+  font-family: 'Satisfy', serif;
   transition: ease-in-out 0.3s;
 }
 .about .content .count-box a:hover {
   color: #82909c;
 }
 .about .image {
-  background: url("../img/me.jpg") center center no-repeat;
+  background: url('../img/me.jpg') center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
@@ -541,7 +559,7 @@ section {
   text-transform: uppercase;
   display: block;
   font-weight: 700;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #3b434a;
 }
 .about .skills-content .progress .skill .val {
@@ -600,7 +618,7 @@ section {
   padding-bottom: 0;
 }
 .resume .resume-item::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 16px;
   height: 16px;
@@ -665,13 +683,13 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: url("../img/testimonials-bg.jpg") no-repeat;
+  background: url('../img/testimonials-bg.jpg') no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
 }
 .testimonials::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
@@ -682,7 +700,8 @@ section {
 .testimonials .section-header {
   margin-bottom: 40px;
 }
-.testimonials .testimonials-carousel, .testimonials .testimonials-slider {
+.testimonials .testimonials-carousel,
+.testimonials .testimonials-slider {
   overflow: hidden;
 }
 .testimonials .testimonial-item {
@@ -706,7 +725,8 @@ section {
   color: #ddd;
   margin: 0 0 15px 0;
 }
-.testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
   color: rgba(255, 255, 255, 0.4);
   font-size: 26px;
 }
@@ -765,7 +785,8 @@ section {
   transition: all 0.3s ease-in-out;
   border: 2px solid #fff;
 }
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
   color: #f3a200;
   border-color: #ffb727;
 }
@@ -801,7 +822,8 @@ section {
   font-size: 14px;
   margin-bottom: 0;
 }
-.portfolio .portfolio-item .portfolio-info .preview-link, .portfolio .portfolio-item .portfolio-info .details-link {
+.portfolio .portfolio-item .portfolio-info .preview-link,
+.portfolio .portfolio-item .portfolio-info .details-link {
   position: absolute;
   right: 40px;
   font-size: 24px;
@@ -809,7 +831,8 @@ section {
   color: #fff;
   transition: 0.3s;
 }
-.portfolio .portfolio-item .portfolio-info .preview-link:hover, .portfolio .portfolio-item .portfolio-info .details-link:hover {
+.portfolio .portfolio-item .portfolio-info .preview-link:hover,
+.portfolio .portfolio-item .portfolio-info .details-link:hover {
   color: #ffc041;
 }
 .portfolio .portfolio-item .portfolio-info .details-link {
@@ -835,14 +858,20 @@ section {
   margin-top: 20px;
   position: relative;
 }
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
   opacity: 1;
   border: 1px solid #ffb727;
 }
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #ffb727;
 }
 .portfolio-details .portfolio-info {
@@ -901,7 +930,7 @@ section {
   font-size: 36px;
   color: #ffb727;
   font-weight: 600;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin-bottom: 20px;
 }
 .pricing h4 sup {
@@ -949,7 +978,7 @@ section {
   transition: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 600;
   transition: 0.3s;
 }
@@ -1059,7 +1088,7 @@ section {
   padding: 15px;
 }
 .contact .php-email-form .loading:before {
-  content: "";
+  content: '';
   display: inline-block;
   border-radius: 50%;
   width: 24px;
@@ -1070,12 +1099,14 @@ section {
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
-.contact .php-email-form input, .contact .php-email-form textarea {
+.contact .php-email-form input,
+.contact .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
 }
-.contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
+.contact .php-email-form input::focus,
+.contact .php-email-form textarea::focus {
   background-color: #ffb727;
 }
 .contact .php-email-form input {
@@ -1084,7 +1115,7 @@ section {
 .contact .php-email-form textarea {
   padding: 12px 15px;
 }
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type='submit'] {
   background: #ffb727;
   border: 0;
   padding: 10px 24px;
@@ -1092,7 +1123,7 @@ section {
   transition: 0.4s;
   border-radius: 5px;
 }
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type='submit']:hover {
   background: #ffc85a;
 }
 @-webkit-keyframes animate-loading {
@@ -1116,7 +1147,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("../img/footer-bg.jpg") top center no-repeat;
+  background: url('../img/footer-bg.jpg') top center no-repeat;
   background-size: cover;
   color: #fff;
   font-size: 14px;
@@ -1125,7 +1156,7 @@ section {
   position: relative;
 }
 #footer::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
@@ -1141,7 +1172,7 @@ section {
   font-weight: 700;
   color: #fff;
   position: relative;
-  font-family: "Satisfy", serif;
+  font-family: 'Satisfy', serif;
   padding: 0;
   margin: 0 0 15px 0;
 }
