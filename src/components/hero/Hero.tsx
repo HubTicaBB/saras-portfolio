@@ -11,6 +11,7 @@ import {
 } from './style';
 import './animation.css';
 import useScreenSize from '../../hooks/useScreenSize';
+import { useTranslation } from 'react-i18next';
 
 type Props = {
   scrollTo: () => void;
@@ -20,12 +21,13 @@ const Hero: React.FC<Props> = ({ scrollTo }) => {
   const [isButtonHovered, setIsButtonHovered] = useState<boolean>(false);
 
   const { screenL } = useScreenSize();
+  const { t } = useTranslation(['content']);
 
   return (
     <section style={heroSectionCSS}>
       <div style={herocontainerCSS}>
         <h1 style={titleCSS(screenL)}>{content.home.nameTitle}</h1>
-        <h2 style={subtitleCSS(screenL)}>{content.home.subtitle}</h2>
+        <h2 style={subtitleCSS(screenL)}>{t('content:home.subtitle')}</h2>
         <div
           id='scroll-button'
           onClick={scrollTo}
