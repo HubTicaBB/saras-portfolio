@@ -1,0 +1,13 @@
+{
+  "navbar": {
+    "home": "Početna strana",
+    "portfolio": "Portfolio",
+    "about": "O meni",
+    "resume": "Biografija",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "nameTitle": "Sara Ilić",
+    "subtitle": "Profesionalni ilustrator, ikonograf i dizajner"
+  }
+}

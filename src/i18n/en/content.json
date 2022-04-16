@@ -1,0 +1,16 @@
+{
+  "navbar": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "home": {
+    "nameTitle": "Sara Ilić",
+    "subtitle": "I'm a professional illustrator, iconographer and designer"
+  },
+  "portfolio": {
+    "title": "My portfolio"
+  }
+}
