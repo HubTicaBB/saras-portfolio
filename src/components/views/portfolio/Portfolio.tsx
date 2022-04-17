@@ -34,7 +34,7 @@ const splitToColumns = (data: Artwork[]): Columns => {
   };
 };
 
-const Portfolio = () => {
+const Portfolio: React.FC = () => {
   const [filterFocusId, setFilterFocusId] = useState<string | null | undefined>(
     content.portfolio.filters[0]
   );

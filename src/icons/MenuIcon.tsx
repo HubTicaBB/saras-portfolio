@@ -4,7 +4,7 @@ type Props = {
   color?: string;
 };
 
-export const MenuIcon = ({ color }: Props) => (
+export const MenuIcon: React.FC<Props> = ({ color }) => (
   <svg
     width='40'
     height='40'

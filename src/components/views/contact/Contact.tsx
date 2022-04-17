@@ -1,7 +1,7 @@
 import Section from '../../layout/Section';
 import { useTranslation } from 'react-i18next';
 
-const Contact = () => {
+const Contact: React.FC = () => {
   const { t } = useTranslation(['content']);
 
   return (

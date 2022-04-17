@@ -19,7 +19,12 @@ type Props = {
   setHoverId: (id: string | null | undefined) => void;
 };
 
-const MobileNavbar = ({ focusId, setFocusId, hoverId, setHoverId }: Props) => {
+const MobileNavbar: React.FC<Props> = ({
+  focusId,
+  setFocusId,
+  hoverId,
+  setHoverId,
+}) => {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
 
   return (

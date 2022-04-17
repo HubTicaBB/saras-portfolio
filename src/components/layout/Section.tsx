@@ -7,7 +7,7 @@ import {
   titleShadowCSS,
 } from './style';
 
-const Section = ({ title, children }: PropsWithChildren<any>) => {
+const Section: React.FC<PropsWithChildren<any>> = ({ title, children }) => {
   const { screenL } = useScreenSize();
 
   return (

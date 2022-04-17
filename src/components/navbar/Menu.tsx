@@ -17,7 +17,7 @@ type Props = {
   linksColor?: string;
 };
 
-const Menu = ({
+const Menu: React.FC<Props> = ({
   focusId,
   setFocusId,
   hoverId,
@@ -25,7 +25,7 @@ const Menu = ({
   navItemsStyle = navItemsCSS,
   navItemStyle = navItemCSS,
   linksColor = colorPalette.default.white,
-}: Props) => {
+}) => {
   const { t } = useTranslation(['content']);
 
   const isHovered = (id: string) => id === hoverId;

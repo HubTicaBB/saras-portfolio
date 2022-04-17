@@ -4,7 +4,7 @@ type Props = {
   color?: string;
 };
 
-export const ArrowUpIcon = ({ color }: Props) => (
+export const ArrowUpIcon: React.FC<Props> = ({ color }) => (
   <svg
     width='20'
     height='20'

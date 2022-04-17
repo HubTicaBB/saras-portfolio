@@ -8,7 +8,7 @@ import { headerCSS, navbarCSS, scrollToTopCSS } from './style';
 import { HOME_ELEMENT_ID } from '../../constants';
 import { scrollToTop } from '../../utils/scroll';
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [scrollY, setScrolledY] = useState(0);
   const [focusId, setFocusId] = useState<string | null | undefined>(
     HOME_ELEMENT_ID

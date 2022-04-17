@@ -4,7 +4,7 @@ type Props = {
   color?: string;
 };
 
-export const ChevronDownIcon = ({ color }: Props) => (
+export const ChevronDownIcon: React.FC<Props> = ({ color }) => (
   <svg
     width='48'
     height='48'
