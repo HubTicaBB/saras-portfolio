@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { content } from '../../fixtures';
 import { ChevronDownIcon } from '../../icons/ChevronDownIcon';
 import { colorPalette } from '../../theme/colorPalette';
 import {
@@ -26,7 +25,7 @@ const Hero: React.FC<Props> = ({ scrollTo }) => {
   return (
     <section style={heroSectionCSS}>
       <div style={herocontainerCSS}>
-        <h1 style={titleCSS(screenL)}>{content.home.nameTitle}</h1>
+        <h1 style={titleCSS(screenL)}>{t('content:home.name')}</h1>
         <h2 style={subtitleCSS(screenL)}>{t('content:home.subtitle')}</h2>
         <div
           id='scroll-button'

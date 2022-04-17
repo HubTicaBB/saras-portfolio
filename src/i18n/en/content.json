@@ -7,10 +7,28 @@
     "contact": "Contact"
   },
   "home": {
-    "nameTitle": "Sara Ilić",
+    "name": "Sara Ilić",
     "subtitle": "I'm a professional illustrator, iconographer and designer"
   },
   "portfolio": {
-    "title": "My portfolio"
+    "title": "My portfolio",
+    "filter": {
+      "all": "All",
+      "illustrations": "Illustrations",
+      "icons": "Icons",
+      "necklaces": "Necklaces"
+    }
+  },
+  "about": {
+    "title": "About me",
+    "description": "About me here"
+  },
+  "resume": {
+    "title": "Resume",
+    "description": "Resume here"
+  },
+  "contact": {
+    "title": "Contact me",
+    "description": "Contact here"
   }
 }

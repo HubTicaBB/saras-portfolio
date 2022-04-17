@@ -16,6 +16,7 @@ import {
   nameCSS,
   priceStatusCSS,
 } from './style';
+import { useTranslation } from 'react-i18next';
 
 type Columns = {
   firstColumn: Artwork[];
@@ -35,7 +36,7 @@ const splitToColumns = (data: Artwork[]): Columns => {
 
 const Portfolio = () => {
   const [filterFocusId, setFilterFocusId] = useState<string | null | undefined>(
-    content.portfolio.filters[0].id
+    content.portfolio.filters[0]
   );
   const [filterHoverId, setFilterHoverId] = useState<
     string | null | undefined
@@ -53,6 +54,7 @@ const Portfolio = () => {
   }, [filteredArtworks]);
 
   const { screenS, screenL } = useScreenSize();
+  const { t } = useTranslation(['content']);
 
   const isFilterHovered = (id: string) => id === filterHoverId;
   const isFilterFocused = (id: string) => id === filterFocusId;
@@ -86,22 +88,26 @@ const Portfolio = () => {
   };
 
   return (
-    <Section title={content.portfolio.title}>
+    <Section title={t('content:portfolio.title')}>
       <ul style={filtersCSS}>
-        {content.portfolio.filters.map(({ id, text }) => (
+        {content.portfolio.filters.map((filter) => (
           <li
-            key={id}
+            key={filter}
             onClick={() => {
-              filterArtworks(id);
-              setFilterFocusId(id);
+              filterArtworks(filter);
+              setFilterFocusId(filter);
             }}
-            onMouseOver={() => setFilterHoverId(id)}
+            onMouseOver={() => setFilterHoverId(filter)}
             onMouseOut={() =>
-              setFilterHoverId(isFilterFocused(id) ? filterHoverId : null)
+              setFilterHoverId(isFilterFocused(filter) ? filterHoverId : null)
             }
-            style={filterCSS(isFilterHovered(id), isFilterFocused(id), screenL)}
+            style={filterCSS(
+              isFilterHovered(filter),
+              isFilterFocused(filter),
+              screenL
+            )}
           >
-            {text}
+            {t(`content:portfolio.filter.${filter}`)}
           </li>
         ))}
       </ul>

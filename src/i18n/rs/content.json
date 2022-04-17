@@ -7,7 +7,28 @@
     "contact": "Kontakt"
   },
   "home": {
-    "nameTitle": "Sara Ilić",
+    "name": "Sara Ilić",
     "subtitle": "Profesionalni ilustrator, ikonograf i dizajner"
+  },
+  "portfolio": {
+    "title": "Moj portfolio",
+    "filter": {
+      "all": "Sve",
+      "illustrations": "Ilustracije",
+      "icons": "Ikone",
+      "necklaces": "Ogrlice"
+    }
+  },
+  "about": {
+    "title": "O meni",
+    "description": "O meni ovde"
+  },
+  "resume": {
+    "title": "Biografija",
+    "description": "Biografija ovde"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Kontakt ovde"
   }
 }

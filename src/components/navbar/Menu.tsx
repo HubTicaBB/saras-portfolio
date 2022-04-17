@@ -5,6 +5,7 @@ import { colorPalette } from '../../theme/colorPalette';
 import { navItemCSS, navItemsCSS, navLinkCSS } from './style';
 import { HOME_ELEMENT_ID } from '../../constants';
 import { scrollTo, scrollToTop } from '../../utils/scroll';
+import { useTranslation } from 'react-i18next';
 
 type Props = {
   focusId: string | null | undefined;
@@ -25,6 +26,8 @@ const Menu = ({
   navItemStyle = navItemCSS,
   linksColor = colorPalette.default.white,
 }: Props) => {
+  const { t } = useTranslation(['content']);
+
   const isHovered = (id: string) => id === hoverId;
   const isFocused = (id: string) => id === focusId;
 
@@ -42,16 +45,20 @@ const Menu = ({
 
   return (
     <ul style={navItemsStyle}>
-      {content.navItems.map(({ id, cta }) => (
-        <li key={id} style={navItemStyle}>
-          <Link to={id} offset={-60}>
+      {content.navItems.map((navItem) => (
+        <li key={navItem} style={navItemStyle}>
+          <Link to={navItem} offset={-60}>
             <span
-              onClick={() => handleScroll(id)}
-              onMouseOver={() => setHoverId(id)}
-              onMouseOut={() => setHoverId(isFocused(id) ? hoverId : null)}
-              style={navLinkCSS(isHovered(id), isFocused(id), linksColor)}
+              onClick={() => handleScroll(navItem)}
+              onMouseOver={() => setHoverId(navItem)}
+              onMouseOut={() => setHoverId(isFocused(navItem) ? hoverId : null)}
+              style={navLinkCSS(
+                isHovered(navItem),
+                isFocused(navItem),
+                linksColor
+              )}
             >
-              {cta}
+              {t(`content:navbar.${navItem}`)}
             </span>
           </Link>
         </li>

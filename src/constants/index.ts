@@ -6,3 +6,8 @@ export const ABOUT_ELEMENT_ID = 'about';
 export const RESUME_ELEMENT_ID = 'resume';
 export const PORTFOLIO_ELEMENT_ID = 'portfolio';
 export const CONTACT_ELEMENT_ID = 'contact';
+
+export const FILTER_ALL = 'all';
+export const FILTER_ILLUSTRATIONS = 'illustrations';
+export const FILTER_ICONS = 'icons';
+export const FILTER_NECKLACES = 'necklaces';
