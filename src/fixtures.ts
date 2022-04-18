@@ -6,6 +6,8 @@ import {
   FILTER_ILLUSTRATIONS,
   FILTER_NECKLACES,
   HOME_ELEMENT_ID,
+  LANGUAGE_EN,
+  LANGUAGE_RS,
   PORTFOLIO_ELEMENT_ID,
   RESUME_ELEMENT_ID,
 } from './constants';
@@ -21,4 +23,5 @@ export const content = {
   portfolio: {
     filters: [FILTER_ALL, FILTER_ILLUSTRATIONS, FILTER_ICONS, FILTER_NECKLACES],
   },
+  languages: [LANGUAGE_RS, LANGUAGE_EN],
 };

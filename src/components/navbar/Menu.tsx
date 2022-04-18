@@ -1,11 +1,18 @@
-import { CSSProperties, useCallback } from 'react';
+import { CSSProperties, useCallback, useState } from 'react';
 import { Link } from 'react-scroll';
 import { content } from '../../fixtures';
 import { colorPalette } from '../../theme/colorPalette';
-import { navItemCSS, navItemsCSS, navLinkCSS } from './style';
+import {
+  languagePickerCSS,
+  navItemCSS,
+  navItemsCSS,
+  navLinkCSS,
+} from './style';
 import { HOME_ELEMENT_ID } from '../../constants';
 import { scrollTo, scrollToTop } from '../../utils/scroll';
 import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n/config';
+import { GlobeIcon } from '../../icons/GlobeIcon';
 
 type Props = {
   focusId: string | null | undefined;
@@ -15,6 +22,7 @@ type Props = {
   navItemsStyle?: CSSProperties;
   navItemStyle?: CSSProperties;
   linksColor?: string;
+  closeMobileMenu?: () => void;
 };
 
 const Menu: React.FC<Props> = ({
@@ -25,8 +33,9 @@ const Menu: React.FC<Props> = ({
   navItemsStyle = navItemsCSS,
   navItemStyle = navItemCSS,
   linksColor = colorPalette.default.white,
+  closeMobileMenu,
 }) => {
-  const { t } = useTranslation(['content']);
+  const { t } = useTranslation('content');
 
   const isHovered = (id: string) => id === hoverId;
   const isFocused = (id: string) => id === focusId;
@@ -34,14 +43,19 @@ const Menu: React.FC<Props> = ({
   const handleScroll = useCallback(
     (id: string) => {
       setFocusId(id);
+      if (!!closeMobileMenu) closeMobileMenu();
       if (id === HOME_ELEMENT_ID) {
         scrollToTop();
       } else {
         scrollTo(id);
       }
     },
-    [setFocusId]
+    [closeMobileMenu, setFocusId]
   );
+
+  const handleLanguageChange = (newLanguage: string) => {
+    i18n.changeLanguage(newLanguage);
+  };
 
   return (
     <ul style={navItemsStyle}>
@@ -58,11 +72,24 @@ const Menu: React.FC<Props> = ({
                 linksColor
               )}
             >
-              {t(`content:navbar.${navItem}`)}
+              {t(`navbar.${navItem}`)}
             </span>
           </Link>
         </li>
       ))}
+      <li style={navLinkCSS(false, false, linksColor)}>
+        <span>
+          <GlobeIcon color={linksColor} />
+          {content.languages.map((language) => (
+            <span
+              onClick={() => handleLanguageChange(language)}
+              style={languagePickerCSS(i18n.language === language, linksColor)}
+            >
+              {language}
+            </span>
+          ))}
+        </span>
+      </li>
     </ul>
   );
 };

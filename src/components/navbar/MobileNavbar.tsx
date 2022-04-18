@@ -42,6 +42,7 @@ const MobileNavbar: React.FC<Props> = ({
             navItemsStyle={mobileNavItemsCSS}
             navItemStyle={navItemCSS}
             linksColor={colorPalette.default.dark}
+            closeMobileMenu={() => setNavbarOpen(false)}
           />
         </div>
       ) : (

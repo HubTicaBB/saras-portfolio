@@ -117,3 +117,15 @@ export const scrollToTopCSS = (isScrolledDown: boolean): CSSProperties => ({
   borderRadius: '50%',
   cursor: 'pointer',
 });
+
+export const languagePickerCSS = (
+  isSelected: boolean,
+  linksColor: string
+): CSSProperties => ({
+  margin: '0 4px',
+  paddingBottom: '2px',
+  borderBottomStyle: isSelected ? 'solid' : 'none',
+  borderBottomColor: linksColor,
+  borderBottomWidth: '1px',
+  width: 'fit-content',
+});
