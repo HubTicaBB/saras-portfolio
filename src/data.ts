@@ -3,22 +3,28 @@ import { Artwork } from './types/artworks';
 export const data: Artwork[] = [
   {
     id: 1,
-    name: 'Bogorodica',
+    name: { rs: 'Bogorodica', en: 'Godmother' },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: 10,
       height: 15,
       radius: null,
     },
     status: 'available',
-    price: '80.000,00 din',
+    price: { rs: '58.000,00 din', en: '580,00 EUR' },
   },
   {
     id: 2,
-    name: 'Bogorodica',
+    name: { rs: 'Bogorodica', en: 'Godmother' },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: null,
       height: null,
@@ -28,9 +34,12 @@ export const data: Artwork[] = [
   },
   {
     id: 3,
-    name: 'Rodjenje Hristovo',
+    name: { rs: 'Rodjenje Hristovo', en: 'Nativity of Jesus Christ' },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: 40,
       height: 50,
@@ -40,9 +49,12 @@ export const data: Artwork[] = [
   },
   {
     id: 4,
-    name: 'Detalj',
+    name: { rs: 'Detalj', en: 'A Detail' },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: null,
       height: null,
@@ -52,9 +64,12 @@ export const data: Artwork[] = [
   },
   {
     id: 5,
-    name: 'Detalj',
+    name: { rs: 'Detalj', en: 'A Detail' },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: null,
       height: null,
@@ -63,9 +78,15 @@ export const data: Artwork[] = [
   },
   {
     id: 6,
-    name: 'Hristos i Andjeo cuvar, diptih',
+    name: {
+      rs: 'Hristos i Andjeo cuvar, diptih',
+      en: 'Jesus Christ and Guardian Angel, diptych',
+    },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: 10,
       height: 15,
@@ -75,22 +96,31 @@ export const data: Artwork[] = [
   },
   {
     id: 7,
-    name: 'Hristos isceljuje slepog',
+    name: { rs: 'Hristos isceljuje slepog', en: 'Christ Healing the Blind' },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: null,
       height: null,
       radius: 20,
     },
     status: 'available',
-    price: '58.000,00 din',
+    price: { rs: '58.000,00 din', en: '580,00 EUR' },
   },
   {
     id: 8,
-    name: 'Hristov ulazak u Jerusalim',
+    name: {
+      rs: 'Hristov ulazak u Jerusalim',
+      en: "Jesus Christ's Entry into Jerusalem",
+    },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: 50,
       height: 60,
@@ -100,22 +130,31 @@ export const data: Artwork[] = [
   },
   {
     id: 9,
-    name: 'Bozic, diptih',
+    name: {
+      rs: 'Bozic, diptih',
+      en: 'Christmas, diptych',
+    },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: 15,
       height: 20,
       radius: null,
     },
     status: 'available',
-    price: '65.000,00 din',
+    price: { rs: '65.000,00 din', en: '650,00 EUR' },
   },
   {
     id: 10,
-    name: 'Blagovesti',
+    name: { rs: 'Blagovesti', en: 'Annunciation' },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: null,
       height: null,
@@ -125,9 +164,12 @@ export const data: Artwork[] = [
   },
   {
     id: 11,
-    name: 'Detalj',
+    name: { rs: 'Detalj', en: 'A Detail' },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: null,
       height: null,
@@ -136,9 +178,12 @@ export const data: Artwork[] = [
   },
   {
     id: 12,
-    name: 'Miscellaneous',
+    name: { rs: 'Miscellaneous', en: 'Miscellaneous' },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: null,
       height: null,
@@ -148,9 +193,15 @@ export const data: Artwork[] = [
   },
   {
     id: 13,
-    name: 'Obrezanje i Hristova propoved u hramu',
+    name: {
+      rs: 'Obrezanje i Hristova propoved u hramu',
+      en: "Circumcision and Christ's Sermon at the Temple",
+    },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: 50,
       height: 60,
@@ -160,9 +211,15 @@ export const data: Artwork[] = [
   },
   {
     id: 14,
-    name: 'Propoved u hramu, detalj',
+    name: {
+      rs: 'Propoved u hramu, detalj',
+      en: 'The Sermon at the Temple, a Detail',
+    },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: null,
       height: null,
@@ -172,9 +229,12 @@ export const data: Artwork[] = [
   },
   {
     id: 15,
-    name: 'Blagovesti',
+    name: { rs: 'Blagovesti', en: 'Annunciation' },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: 10,
       height: 40,
@@ -184,9 +244,12 @@ export const data: Artwork[] = [
   },
   {
     id: 16,
-    name: 'Sv Anastasija',
+    name: { rs: 'Sv Anastasija', en: 'St Anastasia' },
     category: 'icons',
-    technique: 'Kombinovana tehnika na platnu',
+    technique: {
+      rs: 'Kombinovana tehnika na platnu',
+      en: 'Mixed technique on canvas',
+    },
     size: {
       width: null,
       height: null,

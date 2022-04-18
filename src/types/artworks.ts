@@ -1,11 +1,16 @@
 export type Artwork = {
   id: number;
-  name: string;
+  name: LocalizedProp;
   category: Category;
-  technique: string;
+  technique: LocalizedProp;
   size: Size;
   status?: Status;
-  price?: string;
+  price?: LocalizedProp;
+};
+
+export type LocalizedProp = {
+  rs: string;
+  en: string;
 };
 
 const CATEGORIES = ['icons', 'illustrations', 'necklaces'] as const;

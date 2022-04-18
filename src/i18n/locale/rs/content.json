@@ -1,5 +1,4 @@
 {
-  "title": "Profesionalni ilustrator, ikonograf i dizajner",
   "navbar": {
     "home": "Početna strana",
     "portfolio": "Portfolio",
@@ -31,5 +30,11 @@
   "contact": {
     "title": "Kontakt",
     "description": "Kontakt ovde"
+  },
+  "artwork": {
+    "status": {
+      "available": "Dostupno",
+      "sold": "Prodato"
+    }
   }
 }

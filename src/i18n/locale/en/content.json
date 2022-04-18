@@ -1,5 +1,4 @@
 {
-  "title": "I'm a professional illustrator, iconographer and designer",
   "navbar": {
     "home": "Home",
     "portfolio": "Portfolio",
@@ -31,5 +30,11 @@
   "contact": {
     "title": "Contact me",
     "description": "Contact here"
+  },
+  "artwork": {
+    "status": {
+      "available": "Available",
+      "sold": "Sold"
+    }
   }
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { data } from '../../../data';
 import { content } from '../../../fixtures';
 import useScreenSize from '../../../hooks/useScreenSize';
-import { Artwork, Size, Status } from '../../../types/artworks';
+import { Artwork, LocalizedProp, Size, Status } from '../../../types/artworks';
 import Section from '../../layout/Section';
 import {
   artworkContainerCSS,
@@ -17,6 +17,8 @@ import {
   priceStatusCSS,
 } from './style';
 import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n/config';
+import { localized } from '../../../utils/localized';
 
 type Columns = {
   firstColumn: Artwork[];
@@ -67,14 +69,15 @@ const Portfolio: React.FC = () => {
     return '';
   };
 
-  const formatPriceStatus = (price?: string, status?: Status) => {
+  const formatPriceStatus = (price?: LocalizedProp, status?: Status) => {
     switch (status) {
       case 'available':
-        return price;
+        if (!price) return t('content:artwork.status.available');
+        return localized(price);
       case 'sold':
-        return 'Sold';
+        return t('content:artwork.status.sold');
       default:
-        return 'Sold';
+        return t('content:artwork.status.sold');
     }
   };
 
@@ -86,6 +89,8 @@ const Portfolio: React.FC = () => {
 
     setFilteredArtworks(filtered);
   };
+
+  console.log(i18n.language);
 
   return (
     <Section title={t('content:portfolio.title')}>
@@ -141,12 +146,12 @@ const Portfolio: React.FC = () => {
                     >
                       <img
                         src={require(`../../../assets/${category}/${id}.jpg`)}
-                        alt={name}
+                        alt={localized(name)}
                         style={imageCSS(isArtworkHovered(id))}
                       />
                       <div style={artworkInfoCSS(isArtworkHovered(id))}>
-                        <h4 style={nameCSS()}>{name}</h4>
-                        <p style={detailsCSS()}>{technique}</p>
+                        <h4 style={nameCSS()}>{localized(name)}</h4>
+                        <p style={detailsCSS()}>{localized(technique)}</p>
                         <p style={detailsCSS()}>
                           <span>{formatSize(size)}</span>
                           <span style={priceStatusCSS()}>
